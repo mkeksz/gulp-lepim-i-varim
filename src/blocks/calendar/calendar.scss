@@ -1,0 +1,236 @@
+.calendar{
+  margin: 0 66px 0 160px;
+}
+
+.calendar__pages{
+  margin-top: 45px;
+  @include flex();
+  >li{
+    margin-right: 32px;
+    position: relative;
+    >a{
+      @include font($size: 26px);
+      line-height: 35px;
+      color: #000;
+    }
+    >a.active{
+      font-weight: bold;
+    }
+    a.active:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -5px;
+      width: 19px;
+      border: solid 1px #1cd032;
+    }
+  }
+  >li:last-child{
+    margin-right: 0;
+  }
+}
+
+.calendar__item{
+  background: #fff;
+  box-shadow: 0px 2px 23px #e4e6e9;
+  height: 102px;
+  border-radius: 6px;
+  @include flex();
+  margin-top: 13px;
+  max-width: 693px;
+}
+.calendar__item:first-child{
+  margin-top: 0;
+}
+.calendar__item:nth-last-child(1),
+.calendar__item:nth-last-child(2){
+  background: #27d33c;
+  .calendar__item-left{
+    border-right: solid 1px #fff;
+    >div:first-child{
+      color: #fff;
+    }
+  }
+  .calendar__item-right{
+    >div:last-child{
+      >span{
+        color: #8c96ab;
+        background: #fff;
+      }
+    }
+  }
+}
+
+.calendar__item-left{
+  border-right: solid 1px #c4c4c4;
+  @include flex($align: center);
+  width: 248px;
+  >div:first-child{
+    @include font('Lato', $weight: 500, $size: 48px);
+    line-height: 71px;
+    text-align: center;
+    color: #8c96ab;
+    margin-right: 24px;
+  }
+  >div:last-child{
+    @include flex(column);
+    @include font($weight: bold, $size: 15px);
+    line-height: 20px;
+    color: #6b7897;
+    letter-spacing: .59px;
+    >span:last-child{
+      color: #8c96ab;
+    }
+  }
+}
+
+.calendar__item-right{
+  width: calc(100% - 248px);
+  @include flex($align: center, $justify: flex-start);
+  padding-left: 19px;
+  >div:first-child{
+    >h4{
+      @include font($weight: bold, $size: 17px);
+      line-height: 23px;
+      letter-spacing: .67px;
+    }
+    >ul{
+      margin-top: 8px;
+      @include flex($align: center);
+      >li{
+        margin-right: 22px;
+        @include font($weight: bold, $size: 15px);
+        color: #8c96ab;
+        line-height: 20px;
+        letter-spacing: .59px;
+      }
+      >li:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+  >div:last-child{
+    margin-left: 33px;
+    >span{
+      text-align: center;
+      padding-top: 8px;
+      display: block;
+      width: 64px;
+      cursor: pointer;
+      height: 40px;
+      border-radius: 23px;
+      background: #ff6260;
+      @include font($weight: bold, $size: 24px);
+      color: #fff;
+      line-height: 32px;
+      letter-spacing: .95px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .calendar{
+    margin: 0 0 0 80px;
+  }
+  .calendar__item-left{
+    width: 85px;
+    flex-wrap: wrap;
+    >div{
+      flex: 100%;
+    }
+    >div:first-child{
+      font-size: 30px;
+      line-height: 31px;
+      margin-right: 0;
+    }
+    >div:last-child{
+      text-align: center;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+  .calendar__item-right{
+    width: calc(100% - 85px);
+    padding-left: 5px;
+    >div:first-child{
+      >h4{
+        font-size: 12px;
+        line-height: 16px;
+      }
+      >ul{
+        flex-wrap: wrap;
+        >li{
+          margin-right: 5px;
+          font-size: 12px;
+          line-height: 16px;
+          flex: 3;
+        }
+      }
+    }
+    >div:last-child{
+      margin-left: 0;
+      padding-right: 10px;
+      flex: 1;
+      @include flex($justify: flex-end);
+      >span{
+        width: 44px;
+        height: 30px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .calendar__item-right{
+    >div:last-child{
+      padding-right: 5px;
+      >span{
+        width: 24px;
+        height: 20px;
+        font-size: 14px;
+        line-height: 8px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 375px){
+  .calendar{
+    margin-left: 60px;
+  }
+  .calendar__pages{
+    margin-top: 20px;
+  }
+  .calendar__item-left{
+    width: 90px;
+    >div:first-child{
+      margin-top: 20px;
+    }
+    >div:last-child{
+      margin-bottom: 20px;
+    }
+  }
+  .calendar__item-right{
+    width: calc(100% - 90px);
+    >div:first-child{
+      >ul{
+        flex-wrap: wrap;
+        >li{
+          margin-right: 0;
+          flex: 100%;
+        }
+      }
+    }
+
+    >div:last-child{
+      position: absolute;
+      right: 0;
+      >span{
+        width: 24px;
+        height: 20px;
+        font-size: 14px;
+        line-height: 8px;
+      }
+    }
+  }
+}

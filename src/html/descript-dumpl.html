@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    @@include('components/head.html')
+  </head>
+  <body class="b">
+    <div class="b__block b__block_header">
+      <div class="b__wrap">
+        @@include('../blocks/header/header.html', {"class": "header_dark  header_icon-profile"})
+      </div>
+    </div>
+    <div class="b__page">
+      <div class="b__block">
+        <div class="b__wrap">
+          @@include('../blocks/soc-buttons/soc-buttons.html', {"class": "soc-buttons_dark"})
+          @@include('../blocks/title-page/title-page.html', {"class": "title-page_dark", "title": "ПЕЛЬМЕНИ"})
+          @@include('../blocks/descript-dumpl-block/descript-dumpl-block.html')
+          @@include('../blocks/descript-dumpl-block-2/descript-dumpl-block-2.html')
+
+        </div>
+      </div>
+    </div>
+    <div class="b__block b__block_footer">
+      <div class="b__wrap">
+        @@include('../blocks/footer/footer.html', {"class": "footer_dark"})
+      </div>
+    </div>
+  </body>
+</html>

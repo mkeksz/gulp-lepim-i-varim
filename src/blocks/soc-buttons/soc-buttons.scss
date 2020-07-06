@@ -1,0 +1,76 @@
+.soc-buttons{
+  position: absolute;
+  right: 20px;
+  top: 134px;
+
+  ul{
+    position: fixed;
+    li{
+      margin-top: 22px;
+      a{
+        opacity: .4;
+        transition: .2s;
+        svg{
+          width: 30px;
+          height: 30px;
+        }
+      }
+      a:hover{
+        opacity: 1;
+      }
+    }
+    li:first-child{
+      margin-top: 0;
+    }
+  }
+  ul:last-child{
+    position: fixed;
+    display: none;
+  }
+}
+.soc-buttons.soc-buttons_light{
+  ul:first-child{
+    display: none;
+  }
+  ul:last-child{
+    display: block;
+    li{
+      margin-top: 15px;
+      a{
+        opacity: .7;
+        transition: .2s;
+        svg{
+          width: 30px;
+          height: 30px;
+        }
+      }
+      a:hover{
+        opacity: .9;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px){
+  .soc-buttons{
+    top: 80px;
+    ul{
+      li{
+        margin-top: 10px;
+        a{
+          svg{
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .soc-buttons{
+    display: none;
+  }
+}

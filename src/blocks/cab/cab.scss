@@ -1,0 +1,133 @@
+.cab{
+  margin: 0 66px 0 160px;
+}
+.cab__top{
+  @include flex($justify: flex-start);
+  padding-top: 20px;
+  >div:first-child{
+    margin-right: 95px;
+  }
+  >div{
+    @include font($size: 27px);
+    line-height: 39px;
+  }
+}
+.cab__items{
+  margin-top: 14px;
+  @include flex($justify: flex-start);
+  flex-wrap: wrap;
+  >div{
+    position: relative;
+    width: calc(50% - 16px);
+    margin-right: 32px;
+    margin-top: 31px;
+    height: 114px;
+    @include background-image('/img/image-16.png', $position: left top);
+    border: solid 3px #ccc;
+    padding: 15px 60px;
+    >h5{
+      @include font($weight: bold, $size: 19px);
+      line-height: 25px;
+    }
+    >h6{
+      margin-top: 8px;
+      @include font($size: 13px);
+      line-height: 19px;
+      color: #8d8d8d;
+    }
+    >p{
+      @include font($size: 13px);
+      line-height: 19px;
+      margin-top: 4px;
+    }
+  }
+  >div:nth-child(1),
+  >div:nth-child(2){
+    margin-top: 0;
+  }
+  >div:nth-child(2n){
+    margin-right: 0;
+  }
+}
+
+.cab__edit{
+  position: absolute;
+  top: 7px;
+  right: 19px;
+}
+.cab__close{
+  position: absolute;
+  top: 5px;
+  right: 8px;
+}
+
+@media screen and (max-width: 1024px){
+  .cab__items{
+    >div{
+      width: calc(50% - 7px);
+      margin-right: 14px;
+      padding: 15px 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .cab{
+    margin: 0 0 0 80px;
+  }
+  .cab__top{
+    padding-top: 10px;
+    >div:first-child{
+      margin-right: 30px;
+    }
+    >div{
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  .cab__items{
+    >div{
+      width: calc(50% - 7px);
+      margin-right: 14px;
+      padding: 15px 5px;
+      >h5{
+        font-size: 14px;
+        line-height: 19px;
+      }
+      >h6{
+        margin-top: 8px;
+        font-size: 12px;
+        line-height: 18px;
+      }
+      >p{
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px){
+  .cab{
+    margin: 0 0 0 80px;
+  }
+  .cab__top{
+    >div:first-child{
+      margin-right: 10px;
+    }
+    >div{
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+  .cab__items{
+    >div{
+      width: 100%;
+      margin-right: 0;
+    }
+    >div:nth-child(2){
+      margin-top: 31px;
+    }
+  }
+}

@@ -1,0 +1,285 @@
+.add-admin{
+  margin: 0 66px 290px 160px;
+
+  >form{
+    @include flex($justify: flex-start);
+    margin-top: 55px;
+    >div:first-child{
+      width: 380px;
+      margin-right: 66px;
+      >input,
+      >textarea{
+        height: 66px;
+        border-radius: 33px;
+        border: solid 1px #979797;
+        background: #ffffff;
+        @include font($size: 24px);
+        line-height: 35px;
+        padding: 0 30px 0;
+        margin-top: 31px;
+        width: 100%;
+      }
+      >input:first-child{
+        margin-top: 0;
+      }
+      >input[type="file"]{
+        border: none;
+        cursor: pointer;
+      }
+      >input::placeholder,
+      >textarea::placeholder{
+        color: #8a8a8a;
+      }
+      >textarea{
+        padding-top: 15px;
+        height: 226px;
+        resize: none;
+      }
+      >div{
+        @include flex($justify: space-between);
+        padding: 33px 12px 0;
+        >button{
+          @include font($size: 26px);
+          line-height: 42px;
+          letter-spacing: .3px;
+          background: none;
+        }
+      }
+    }
+    >div:last-child{
+      @include flex(column, $justify: flex-start);
+      >a{
+        @include font($size: 24px);
+        text-decoration: underline;
+        line-height: 35px;
+        color: #8a8a8a;
+        margin-top: 19px;
+      }
+    }
+  }
+}
+
+.add-admin__img{
+  width: 314px;
+  height: 289px;
+  background: rgba(216,216,216,.71);
+  @include font($size: 74px);
+  color: #4d4c4c;
+  @include flex($align: center, $justify: center);
+}
+
+.add-admin__select{
+  @include flex($justify: flex-start);
+  margin-top: 30px;
+  >div:first-child{
+    margin-right: 37px;
+    >span{
+      @include font($weight: bold, $size: 43px);
+      @include flex($align: center);
+      line-height: 57px;
+      letter-spacing: .6px;
+      width: 70px;
+      height: 70px;
+      background: #1cd032;
+      border-radius: 50%;
+    }
+  }
+  >div:last-child{
+    @include flex(column, $align: flex-start, $justify: flex-start);
+    padding-top: 20px;
+    >ul{
+      @include flex($justify: flex-start);
+      padding-top: 10px;
+      >li{
+        @include font($size: 25px);
+        line-height: 37px;
+        opacity: .53;
+        letter-spacing: .35px;
+      }
+      >li.active{
+        line-height: 30px;
+        font-weight: bold;
+        opacity: 1;
+      }
+      >span{
+        height: 32px;
+        border-left: solid 2px #979797;
+        margin: 0 10px;
+      }
+    }
+    >ul:first-child{
+      padding-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .add-admin__img{
+    width: 200px;
+    height: 200px;
+  }
+  .add-admin__select{
+    margin-top: 20px;
+    >div:first-child{
+      margin-right: 15px;
+      >span{
+        @include font($weight: bold, $size: 23px);
+        width: 40px;
+        height: 40px;
+      }
+    }
+    >div:last-child{
+      padding-top: 5px;
+      >ul{
+        @include flex($justify: flex-start);
+        padding-top: 10px;
+        >li{
+          @include font($size: 16px);
+          line-height: 24px;
+        }
+        >li.active{
+          line-height: 20px;
+        }
+        >span{
+          height: 24px;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .add-admin{
+    margin-right: 0;
+    margin-left: 80px;
+    >form{
+      @include flex($justify: flex-start);
+      margin-top: 20px;
+      >div:first-child{
+        width: 260px;
+        margin-right: 10px;
+        >input,
+        >textarea{
+          height: 46px;
+          border-radius: 23px;
+          font-size: 16px;
+          line-height: 25px;
+          padding: 0 10px 0;
+          margin-top: 21px;
+        }
+        >textarea{
+          padding-top: 10px;
+          height: 186px;
+        }
+        >div{
+          padding: 15px 5px 0;
+          >button{
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+      >div:last-child{
+        >a{
+          font-size: 14px;
+          line-height: 21px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .add-admin__img{
+    width: 100px;
+    height: 100px;
+  }
+  .add-admin__select{
+    margin-top: 20px;
+    >div:first-child{
+      margin-right: 10px;
+    }
+    >div:last-child{
+      padding-top: 5px;
+      >ul{
+        >li{
+          @include font($size: 16px);
+          line-height: 24px;
+        }
+        >li.active{
+          line-height: 20px;
+        }
+        >span{
+          height: 24px;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px){
+  .add-admin{
+    >form{
+      >div:first-child{
+        width: 140px;
+        margin-right: 10px;
+        >input,
+        >textarea{
+          font-size: 14px;
+          line-height: 21px;
+          margin-top: 11px;
+          height: 30px;
+        }
+        >textarea{
+          padding-top: 10px;
+          height: 156px;
+        }
+        >div{
+          padding: 15px 0 0;
+          >button{
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
+      }
+      >div:last-child{
+        >a{
+          font-size: 12px;
+          line-height: 17px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .add-admin__img{
+    width: 40px;
+    height: 40px;
+    font-size: 34px;
+  }
+  .add-admin__select{
+    >div:first-child{
+      margin-right: 5px;
+      >span{
+        font-size: 12px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    >div:last-child{
+      padding-top: 5px;
+      >ul{
+        >li{
+          @include font($size: 12px);
+          line-height: 18px;
+        }
+        >li.active{
+          line-height: 14px;
+        }
+        >span{
+          height: 15px;
+          margin: 0 2px;
+        }
+      }
+    }
+  }
+}

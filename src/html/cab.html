@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    @@include('components/head.html')
+  </head>
+  <body class="b" style="background: #fff;">
+    <div class="b__block b__block_header">
+      <div class="b__wrap">
+        @@include('../blocks/header/header.html', {"class": "header_light header_icon-profile header_cab"})
+      </div>
+    </div>
+    <div class="b__page">
+      <div class="b__block">
+        <div class="b__wrap">
+          @@include('../blocks/soc-buttons/soc-buttons.html', {"class": "soc-buttons_light"})
+          @@include('../blocks/title-page/title-page.html', {"class": "title-page_light title-page_small", "title": "ЛИЧНЫЙ КАБИНЕТ"})
+          @@include('../blocks/cab/cab.html')
+        </div>
+      </div>
+    </div>
+    <div class="b__block b__block_footer">
+      <div class="b__wrap">
+        @@include('../blocks/footer/footer.html', {"class": "footer_light footer_cab"})
+      </div>
+    </div>
+  </body>
+</html>

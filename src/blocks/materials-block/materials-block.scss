@@ -1,0 +1,239 @@
+.materials-block{
+  margin: 0 66px 0 160px;
+
+}
+.materials-block_admin{
+  .materials-block__new{
+    display: block;
+  }
+  .materials-block__pages{
+    display: none;
+  }
+}
+
+.materials-block__new{
+  @include font($size: 30px);
+  line-height: 42px;
+  letter-spacing: .34px;
+  text-align: center;
+  color: #000;
+  display: block;
+  margin-bottom: 20px;
+  >span{
+    margin-right: 10px;
+  }
+}
+
+.materials-block_not-add{
+  .materials-block__new{
+    display: none;
+  }
+  .materials-block__img{
+    display: none;
+  }
+  .materials-block__text{
+    width: 100%;
+    max-width: 100%;
+    >a.materials-block__first-link{
+      display: none;
+    }
+    >a{
+      display: inline;
+    }
+  }
+
+}
+
+.materials-block__items{
+  >li{
+    @include flex($justify: flex-start);
+    margin-top: 32px;
+    height: 208px;
+  }
+  >li:first-child{
+    margin-top: 0;
+  }
+}
+
+.materials-block__img{
+  max-width: 219px;
+  min-width: 219px;
+  margin-right: 15px;
+  >img{
+    width: 100%;
+  }
+}
+
+.materials-block__text{
+  max-width: 555px;
+  border: solid 1px #595959;
+  padding: 33px 50px;
+  >h3{
+    @include font($weight: bold, $size: 29px);
+    line-height: 39px;
+  }
+  >p{
+    @include font($size: 22px);
+    line-height: 32px;
+    margin-bottom: 10px;
+  }
+  >a{
+    @include font($size: 26px);
+    line-height: 44px;
+    color: #6f6f6f;
+    display: none;
+  }
+  >a.materials-block__first-link{
+    display: inline;
+  }
+}
+
+.materials-block__pages{
+  margin-top: 45px;
+  @include flex();
+  >li{
+    margin-right: 32px;
+    position: relative;
+    >a{
+      @include font($size: 26px);
+      line-height: 38px;
+      color: #000;
+    }
+    >a.active{
+      font-weight: bold;
+      line-height: 35px;
+    }
+    >a.active::before{
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 4px;
+      left: -3px;
+      width: 19px;
+      border-top: 2px solid #1CD032
+    }
+  }
+  >li:last-child{
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .materials-block{
+    margin: 0 0 0 80px;
+  }
+  .materials-block__text{
+    padding: 10px;
+    width: calc(100% - 155px);
+    >h3{
+      font-size: 18px;
+      line-height: 24px;
+    }
+    >p{
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 0px;
+    }
+    >a{
+      font-size: 19px;
+    }
+  }
+  .materials-block__items{
+    >li{
+      margin-top: 20px;
+      height: 140px;
+    }
+  }
+  .materials-block__img{
+    max-width: none;
+    min-width: 0;
+    margin-right: 15px;
+    width: 140px;
+    >img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 425px){
+  .materials-block__text{
+    padding: 5px;
+    width: calc(100% - 105px);
+    >h3{
+      font-size: 18px;
+      line-height: 24px;
+    }
+    >p{
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 0px;
+    }
+    >a{
+      font-size: 19px;
+    }
+  }
+  .materials-block__items{
+    >li{
+      margin-top: 20px;
+      height: 100px;
+      margin-left: -10px;
+    }
+  }
+  .materials-block__img{
+    margin-right: 5px;
+    width: 110px;
+  }
+  .materials-block__new{
+    font-size: 20px;
+  }
+  .materials-block__pages{
+    margin-top: 35px;
+    >li{
+      margin-right: 20px;
+      >a{
+        font-size: 20px;
+        line-height: 26px;
+      }
+      >a.active{
+        line-height: 22px;
+      }
+      >a.active::before{
+        bottom: 4px;
+        left: -3px;
+        width: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px){
+  .materials-block__text{
+    width: calc(100% - 105px);
+    >h3{
+      font-size: 14px;
+      line-height: 16px;
+    }
+    >p{
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 0px;
+    }
+    >a{
+      font-size: 14px;
+    }
+  }
+  .materials-block__items{
+    >li{
+      margin-top: 10px;
+      height: 100px;
+    }
+  }
+  .materials-block__img{
+    margin-right: 5px;
+    width: 100px;
+  }
+  .materials-block__pages{
+    margin-top: 20px;
+  }
+}

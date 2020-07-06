@@ -1,0 +1,51 @@
+.title-page{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 124px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
+  h1{
+    @include font($weight: bold, $size: 65px);
+    margin-right: 21px;
+    line-height: 93px;
+    letter-spacing: .98px;
+    color: #fff;
+    background-repeat: repeat-y;
+    background-size: 5px 14px;
+    background-position: left;
+    background-image: radial-gradient(circle, #fff 1.5px, transparent 2.5px);
+  }
+}
+.title-page_light{
+  h1{
+    background-image: radial-gradient(circle, #000 1.5px, transparent 2.5px);
+    color: #000;
+  }
+}
+
+.title-page_small{
+  h1{
+    background-size: 5px 13.9px;
+    background-image: radial-gradient(circle, #000 1.5px, transparent 2.5px);
+  }
+}
+
+
+@media screen and (max-width: 768px){
+  .title-page{
+    width: 50px;
+    h1{
+      font-size: 40px;
+      margin-right: 0;
+      line-height: 50px
+    }
+  }
+  .title-page_small_2{
+    h1{
+      background-size: 5px 12px;
+      background-image: radial-gradient(circle, #000 1.5px, transparent 2.5px);
+    }
+  }
+}

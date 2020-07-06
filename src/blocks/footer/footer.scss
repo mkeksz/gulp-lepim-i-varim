@@ -1,0 +1,163 @@
+:root{
+  --footer-height: 86px;
+  --footer-margin-top: 42px;
+}
+
+.footer{
+  height: var(--footer-height);
+  @include flex($align: center);
+  background-repeat: repeat-x;
+  background-size: 14.5px 5px;
+  background-position: top;
+  background-image: radial-gradient(circle, #fff 1.5px, transparent 2.5px);
+  margin-top: var(--footer-margin-top);
+  .footer__menu_cab{
+    display: none;
+  }
+}
+.footer_light{
+  background-image: radial-gradient(circle, #000 1.5px, transparent 2.5px);
+  .footer__menu{
+    ul{
+      li{
+        a{
+          color: #000;
+        }
+      }
+    }
+  }
+  .footer__icons{
+    ul:first-child{
+      display: none;
+    }
+    ul:last-child{
+      display: flex;
+      li{
+        margin-right: 12px;
+      }
+    }
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+.footer_cab{
+  .footer__menu{
+    display: none;
+  }
+  .footer__menu_cab{
+    display: flex;
+  }
+}
+
+.footer__logo{
+  img{
+    width: 56px;
+    height: 48px;
+  }
+}
+
+.footer__menu{
+  margin-left: 45px;
+  flex: 1;
+  ul{
+    @include flex();
+    li{
+      margin-right: 22px;
+      a{
+        @include font($size: 16px);
+        line-height: 16px;
+        color: #fff;
+      }
+    }
+    li:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
+.footer__icons{
+  flex: 1;
+  ul{
+    @include flex($justify: flex-end);
+    li{
+      margin-right: 25px;
+      svg{
+        width: 23px;
+        height: 23px;
+      }
+    }
+    li:last-child{
+      margin-right: 0;
+    }
+  }
+  ul:last-child{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .footer__icons{
+    ul{
+      li{
+        margin-right: 15px;
+        img{
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+  .footer_light{
+    .footer__icons{
+      img{
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .footer__icons{
+    ul{
+      li{
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .footer__menu{
+    display: none;
+  }
+  .footer__menu_cab{
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .footer__menu{
+    margin-left: 10px;
+    ul{
+      li{
+        margin-right: 10px;
+        a{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .footer_light{
+    .footer__icons{
+      ul:last-child{
+        li{
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  :root{
+    --footer-margin-top: 22px;
+  }
+}
